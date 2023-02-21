@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index page</title>
+  </head>
+  <body>
+    <h1>This is index page!</h1>
 
+    <select>
+      <% for(var i=0; i<data.ids.length; i++) { %>
+        <tr>
+          <td>
+            
+            <option value="<%= data.ids[i].id%>"><%= data.ids[i].id%></option>
+          </td>
+        </tr>
+     <% } %>
+    </select>
+    
+    <select>
+    <% for(var i=0; i<data.name.length; i++) { %>
+      <tr>
+        <td>
+          
+          <option value="<%= data.name[i].name%>"><%= data.name[i].name%></option>
+        </td>
+      </tr>
+   <% } %>
+  </select>
+
+
+  <select>
+    <% for(var i=0; i<data.emails.length; i++) { %>
+      <tr>
+        <td>
+          
+          <option value="<%= data.emails[i].email%>"><%= data.emails[i].email%></option>
+        </td>
+      </tr>
+   <% } %>
+  </select>
+
+
+  </body>
+</html>
